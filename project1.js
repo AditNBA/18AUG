@@ -6,10 +6,10 @@ function cirleMouseFollower(xscale, yscale) {
   });
 }
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true,
-});
+// const scroll = new LocomotiveScroll({
+//   el: document.querySelector("#main"),
+//   smooth: true,
+// });
 
 function firstPageAnim() {
   var tl = gsap.timeline();
@@ -59,3 +59,5 @@ function circleFlatter() {
 circleFlatter();
 firstPageAnim();
 cirleMouseFollower();
+
+console, log("baigan");
