@@ -159,10 +159,10 @@ body {
 }
 
 .elem img {
-  display: none;
   height: 100%;
   position: absolute;
-  z-index: 999;
+  z-index: 99999999999999;
+  opacity: 0;
 }
 
 #about {

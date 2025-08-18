@@ -10,26 +10,7 @@ function cirleMouseFollower(xscale, yscale) {
 //   el: document.querySelector("#main"),
 //   smooth: true,
 // });
-// import LocomotiveScroll from "locomotive-scroll";
 
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector("[data-scroll-container]"),
-//   smooth: true,
-// });
-document.querySelectorAll(".elem").forEach(function (elem) {
-  elem.addEventListener("mousemove", function (details) {
-
-
-
-    // console.log(elem.getBoundingClientRect())
-
-
-    gsap.to(elem.querySelector("img"), {
-      opacity: 1,
-      ease: Power1,
-     
-  });
-});
 function firstPageAnim() {
   var tl = gsap.timeline();
 
@@ -37,8 +18,6 @@ function firstPageAnim() {
     y: "-10",
     opacity: 0,
     duration: 2,
-
-
     ease: Expo.easeInOut,
   })
     .to(".boundingelem", {
@@ -73,26 +52,20 @@ function circleFlatter() {
     yscale = gsap.utils.clamp(0.8, 1.2, ydiff);
 
     cirleMouseFollower(xscale, yscale);
-    
+    console.log(xdiff, ydiff);
   });
 }
 
-// document.querySelectorAll(".elem").forEach(function (elem) {
-//   elem.addEventListener("mousemove", function (dets) {
-//     gsap.to(".elem img", {
-//       opacity: 1,
-//       duration: 2,
-//     });
-//   });
-// });
+// abhi wala
+
+document.querySelectorAll(".elem").forEach(function (elem) {
+  elem.addEventListener("mousemove", function (dets) {
+    gsap.to(elem.querySelector("img"), {
+      opacity: 1,
+    });
+  });
+});
 
 circleFlatter();
 firstPageAnim();
-// cirleMouseFollower(xscale, yscale);
-
-
-
-
-
-
-
+cirleMouseFollower();
